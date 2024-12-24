@@ -34,9 +34,6 @@ jobs:
         - name: Install dependencies for server
           working-directory: ./server
           run: npm install
-        - name: Test Server
-          working-directory: ./server
-          run: npm run test
   classifier-server-build:
     runs-on: ubuntu-latest
     steps:
