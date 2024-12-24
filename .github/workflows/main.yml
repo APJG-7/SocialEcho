@@ -31,12 +31,12 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: 18
-        - name: Install dependencies
+        - name: Install dependencies for server
           working-directory: ./server
           run: npm install
-        - name: Build client
+        - name: Test Server
           working-directory: ./server
-          run: npm run build
+          run: npm run text
   classifier-server-build:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +45,7 @@ jobs:
      - name: Set up Python
        uses: actions/setup-python@v4
        with:
-          python-version: 3.10
+          python-version: "3.10"
      - name: Install Python dependencies
        working-directory: ./classifier_server
        run: |
